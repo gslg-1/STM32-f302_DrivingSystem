@@ -54,12 +54,23 @@
         "set": "c",
         "streambuf": "c",
         "xmemory": "c",
-        "*.idl": "cpp"
+        "*.idl": "cpp",
+        "typeinfo": "c",
+        "typeindex": "c"
     },
     "stm32-for-vscode.openocdPath": "openocd",
     "cortex-debug.openocdPath": "openocd",
     "stm32-for-vscode.makePath": "make",
     "stm32-for-vscode.armToolchainPath": "",
     "cortex-debug.armToolchainPath": "",
-    "files.eol": "\n"
+    // start bash, not the mintty, or you'll get a new window
+    "terminal.integrated.shell.windows": "D:\\Programme\\Cygwin\\bin\\bash.exe",
+    // Use this to keep bash from doing a 'cd ${HOME}'
+    "terminal.integrated.env.windows": {
+        "CHERE_INVOKING": "1"
+    },
+    // Make it a login shell
+    "terminal.integrated.shellArgs.windows": [
+        "-l"
+    ],
 }

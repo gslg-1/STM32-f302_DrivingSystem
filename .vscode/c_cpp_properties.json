@@ -26,7 +26,6 @@
                 "databaseFilename": ""
             },
             "windowsSdkVersion": "10.0.18362.0",
-            "compilerPath": "D:/Programme/Cygwin/bin/gcc.exe",
             "cStandard": "c99",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-arm64"

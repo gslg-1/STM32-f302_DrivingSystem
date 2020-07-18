@@ -5,47 +5,97 @@
     
     "tasks": [
         {
-            "label": "Build STM32",
+            "label": "STM32 Build ",
             "type": "shell",
             "command": "make",
-            "options": {
-                "cwd": "${workspaceFolder}/code/BasicFW/"
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/code/BasicFW"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
             },
-            "problemMatcher": "$gcc",
+            "options": {
+                "cwd": "${workspaceFolder}/code/BasicFW"
+            },
+            "group": "build"
+        },
+        {
+            "label": "STM32 Debug Build",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "DEBUG=1"
+            ],
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/code/BasicFW"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/code/BasicFW"
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
         },
         {
-            "label": "Make Clean",
+            "label": "STM32 Clean Build",
             "type": "shell",
             "command": "make",
-            "args": ["clean"],
+            "args": [
+                "clean"
+            ],
             "options": {
-                "cwd": "${workspaceFolder}/code/BasicFW/"
+                "cwd": "${workspaceFolder}/code/BasicFW"
             },
-            "problemMatcher": [],
+            "group": "build",
+            "problemMatcher": []
         },
         {
             "label": "OpenOCD(ST Nucleo F3)",
             "type": "shell",
             "command": "openocd",
-            "args": ["-f", "st_nucleo_f3.cfg"],
+            "args": [
+                "-f",
+                "st_nucleo_f3.cfg"
+            ],
             "options": {
                 "cwd": "${workspaceFolder}/config/dbg/board"
             },
-            "problemMatcher": [],
+            "problemMatcher": []
         },
         {
             "label": "arm-none-eabi-gdb",
             "type": "shell",
             "command": "arm-none-eabi-gdb",
-            "args": ["-f","../../output/build/BasicFW.elf"],
+            "args": [
+                "-f",
+                "../../output/build/BasicFW.elf"
+            ],
             "options": {
                 "cwd": "${workspaceFolder}/code/BasicFW/"
             },
-            "problemMatcher": [],
+            "problemMatcher": []
         }
     ]
 }
