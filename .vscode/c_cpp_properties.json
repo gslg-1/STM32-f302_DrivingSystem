@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/code/BasicFW/Inc",
+                "${workspaceFolder}/code/BasicFW/Drivers/CMSIS/Include/",
+                "${workspaceFolder}/code/BasicFW/Drivers/CMSIS/Device/ST/STM32F3xx/Include/",
+                "${workspaceFolder}/code/BasicFW/Drivers/STM32F3xx_HAL_Driver/Inc/",
+                "${workspaceFolder}/code/BasicFW/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy/",
+                "${workspaceFolder}/code/BasicFW/Middlewares/Third_Party/FreeRTOS/Source/include/",
+                "${workspaceFolder}/code/BasicFW/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/",
+                "${workspaceFolder}/code/BasicFW/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/",
+                "${workspaceFolder}/code/BasicFW/Middlewares/Third_Party/hanecs/inc/",
+                "${workspaceFolder}/code/BasicFW/Middlewares/Third_Party/hanecs/"
+            ],
+            "defines": [
+                "USE_HAL_DRIVER",
+                "STM32F302x8",
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "windowsSdkVersion": "10.0.18362.0",
+            "compilerPath": "D:/Programme/Cygwin/bin/gcc.exe",
+            "cStandard": "c99",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm64"
+        }
+    ],
+    "version": 4
+}
